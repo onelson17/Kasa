@@ -1,8 +1,5 @@
 import '../css/Banner.css'
 
-
-
-
 function Banner({ image, texte }) {
     return (
         <div className='banner'>
