@@ -3,7 +3,6 @@ import Home from '../pages/home.jsx'
 import About from '../pages/about.jsx'
 import Logement from '../pages/logement.jsx'
 import Error from '../pages/notFound.jsx'
-import Header from './Header.jsx'
 import Layout from './Layout.jsx'
 
 

@@ -1,0 +1,15 @@
+.footer {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 0 20px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    gap: 20px;
+}
+.footer p {
+    color: white;
+}
