@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        console.log(Footer)
+        <h1>Footer</h1>
     )
 }
 

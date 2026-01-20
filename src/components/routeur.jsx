@@ -3,20 +3,23 @@ import Home from '../pages/home.jsx'
 import About from '../pages/about.jsx'
 import Logement from '../pages/logement.jsx'
 import Error from '../pages/notFound.jsx'
+import Header from './Header.jsx'
+import Layout from './Layout.jsx'
 
 
 
 function Chemins() {
 
     return (
-      <Router>
+      <Layout>
           <Routes>
                 <Route path = "/" element={<Home />} />
                 <Route path = "/About" element={<About />} />
                 <Route path = "/Logement/:id" element={<Logement />} />
                 <Route path = "*" element ={<Error />} />
           </Routes>
-  </Router>
+      </Layout>
+  
     )
   }
   
