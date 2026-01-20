@@ -10,7 +10,7 @@ import Layout from './Layout.jsx'
 function Chemins() {
 
     return (
-      <Layout>
+      <Layout ClassName="Layout-contain">
           <Routes>
                 <Route path = "/" element={<Home />} />
                 <Route path = "/About" element={<About />} />
