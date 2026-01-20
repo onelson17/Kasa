@@ -1,0 +1,15 @@
+.collapse {
+    width: 100%;
+    background-color: #FF6060;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-radius: 5px;
+}
+.about-contain {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 75px 0;
+}
