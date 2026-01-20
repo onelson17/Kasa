@@ -3,9 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-main {
-    margin: 0 50px;
-}
+
 .card-contain {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
@@ -17,4 +15,14 @@ main {
     padding: 50px;
     border-radius: 10px;
     margin: 50px 0;
+}
+.layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.layout main {
+    margin: 0 50px;
+    position: relative;
+    flex: 1;
 }

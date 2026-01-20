@@ -1,8 +1,10 @@
-function Error() {
+import Error from "../components/Error"
+
+function Notfound() {
     return (
-        console.log(Error)
+     <Error />
     )
 }
 
 
-export default Error
+export default Notfound
