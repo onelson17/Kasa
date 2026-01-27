@@ -36,3 +36,12 @@ section {
     padding: 15px;
     color: white;
 }
+
+.star-full {
+    color: #FF6060;
+    margin-right: 5px;
+}
+.star-empty {
+    color: #E3E3E3;
+    margin-right: 5px;
+}

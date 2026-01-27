@@ -13,14 +13,19 @@ function Logement() {
     if (!logement) {
         return <Navigate to="/404" replace={true}/> 
     }
+
+    
     const equipmentList = logement.equipments.map((item, index) => (
         <li key={`${item}-${index}`}>{item}</li>))
         const tags = logement.tags.map((tag, index) => (
             <div key={index} className='tag'>{tag}</div>
         ))
+        
+    const marks = [1, 2, 3, 4, 5]
+
     return (
         <>
-       <div>
+      
              <div>
                 <Slider pictures={logement.pictures} />
                 <h1>{logement.title}</h1>
@@ -29,8 +34,20 @@ function Logement() {
             </div>
             <div>
 
+                <div>
+                    
+                </div>  
+                
+                              
+                <div>
+                        {marks.map((marksElement) => (
+                            <span key={marksElement.toString()}>
+                                <i className={`fa-solid fa-star ${logement.rating >= marksElement ? "star-full" : "star-empty"}`}></i>
+                            </span>
+                        ))}
+                </div>
+            
             </div>
-       </div>
 
         <div className='logement--collapse'>
             <Collapse className="space" title="Description" content={logement.description}/>
