@@ -20,3 +20,19 @@ section {
 .collapse--content ul {
     list-style: none;
 }
+
+.tag-contain {
+    display: flex;
+    gap: 24px;
+    margin: 15px 0;
+}
+.tag {
+    border-radius: 10px;
+    background-color: #FF6060;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    color: white;
+}
