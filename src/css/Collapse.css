@@ -1,15 +1,57 @@
+
 .collapse {
     width: 100%;
     background-color: #FF6060;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px;
+    padding: 10px;
     border-radius: 5px;
+    color: white;
+    z-index: 2;
+}
+.arrow {
+    cursor: pointer;
+    transition: transform .6s ease;
+    
+}
+.arrow.opened {
+    transform: rotate(180deg);
 }
 .about-contain {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 80%;
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    margin: 75px 0;
+    gap: 24px;
+    z-index: 10;
+}
+
+.collapse--content {
+    background-color: #F6F6F6;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+    border: none;
+    padding: 20px 15px;
+    animation: slideDown 0.6s ease;
+    margin-top: -3px;
+}
+.content--close {
+    display: none;
+}
+.content--open {
+    pointer-events: auto;
+    
+}
+@keyframes slideDown {
+    from {
+        max-height: 0;
+        transform: translateY(-20px);
+    }
+    
+    to {
+        max-height: 500px;
+        transform: translateY(0);
+    }
 }
