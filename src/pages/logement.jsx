@@ -22,40 +22,45 @@ function Logement() {
         ))
         
     const marks = [1, 2, 3, 4, 5]
+    const hostName = logement.host.name.split(' ')
 
     return (
-        <>
-      
-             <div>
-                <Slider pictures={logement.pictures} />
-                <h1>{logement.title}</h1>
-                <p className='location-logement'>{logement.location}</p>
-                <div className='tag-contain'>{tags}</div>
-            </div>
+        <> 
             <div>
-
+                <Slider pictures={logement.pictures} />
+            </div>
+            <section className='logement-details'>
                 <div>
-                    
-                </div>  
-                
-                              
-                <div>
-                        {marks.map((marksElement) => (
-                            <span key={marksElement.toString()}>
-                                <i className={`fa-solid fa-star ${logement.rating >= marksElement ? "star-full" : "star-empty"}`}></i>
-                            </span>
-                        ))}
+                    <h1>{logement.title}</h1>
+                    <p className='location-logement'>{logement.location}</p>
+                    <div className='tag-contain'>{tags}</div>
                 </div>
+                <div>
+                    <div className="host-container">
+                        <div className="host-name">
+                            <span>{hostName[0]}</span>
+                            <span>{hostName[1]}</span>
+                        </div>
+                        <div className="host-picture">
+                            <img src={logement.host.picture} alt={logement.host.name} />
+                        </div>
+                    </div>
+                              
+                    <div>
+                        {marks.map((marksElement) => (
+                        <span key={marksElement.toString()}>
+                            <i className={`fa-solid fa-star ${logement.rating >= marksElement ? "star-full" : "star-empty"}`}></i>
+                        </span>
+                        ))}
+                    </div>
             
             </div>
-
+        </section>
         <div className='logement--collapse'>
             <Collapse className="space" title="Description" content={logement.description}/>
             <Collapse className="space" title="Équipements" content={<ul>{equipmentList}</ul>}/>
         </div>
         </>
-        
-        
         
         
         

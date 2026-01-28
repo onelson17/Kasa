@@ -16,9 +16,9 @@ function Home() {
             <Card 
                 key={logement.id}
                 id={logement.id}
-                location={logement.title}
+                title={logement.title}
                 cover={logement.cover}
-            
+                location={logement.location}
             />
            ))}
         </div>
