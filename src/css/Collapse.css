@@ -1,4 +1,3 @@
-
 .collapse {
     width: 100%;
     background-color: #FF6060;
@@ -8,23 +7,24 @@
     padding: 10px;
     border-radius: 5px;
     color: white;
-    z-index: 2;
+    z-index: 11;
 }
+
 .arrow {
     cursor: pointer;
-    transition: transform .6s ease;
-    
+    transition: transform 0.6s ease;
+    z-index: 11;
 }
+
 .arrow.opened {
     transform: rotate(180deg);
 }
+
 .about-contain {
-    margin: 0 auto;
-    margin-top: 50px;
+    margin: 50px auto 0;
     width: 80%;
     display: flex;
     flex-direction: column;
-    gap: 24px;
     z-index: 10;
 }
 
@@ -32,26 +32,26 @@
     background-color: #F6F6F6;
     border-radius: 0 0 5px 5px;
     overflow: hidden;
-    border: none;
     padding: 20px 15px;
-    animation: slideDown 0.6s ease;
     margin-top: -3px;
+
+    transition:
+        max-height 0.3s ease-out,
+        opacity 0.3s ease-out .2s,
+        transform 0.3s ease-in-out,
+        margin 0.3s ease-out;
 }
-.content--close {
-    display: none;
-}
+
 .content--open {
-    pointer-events: auto;
-    
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+    margin-bottom: 25px;
 }
-@keyframes slideDown {
-    from {
-        max-height: 0;
-        transform: translateY(-20px);
-    }
-    
-    to {
-        max-height: 500px;
-        transform: translateY(0);
-    }
+
+.content--close {
+    transition: all .3s ease;
+    max-height: 0;
+    opacity: 0;
+
 }
