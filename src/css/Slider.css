@@ -34,3 +34,24 @@
     margin-bottom: 30px;
     color: white;
 }
+
+/* POUR TÉLÉPHONE */
+@media screen and (max-width: 767px) {
+   .slider--image {
+    max-height: 255px;
+    border-radius: 10PX;
+   }
+   .arrows {
+    top: 50%;
+
+   }
+   .arrow-left img,
+   .arrow-right img {
+    height: 24px;
+    width: auto;
+   }
+   .counter-slider {
+    display: none;
+   }
+   
+   }

@@ -4,54 +4,80 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
     border-radius: 5px;
     color: white;
-    z-index: 11;
 }
-
+h2 {
+   padding-left: 17px;
+   margin: 10px 0;
+}
+.text-collapse {
+    padding: 20px 15px;
+}
 .arrow {
     cursor: pointer;
     transition: transform 0.6s ease;
-    z-index: 11;
+    margin-right: 17px;
 }
 
 .arrow.opened {
     transform: rotate(180deg);
-}
-
-.about-contain {
-    margin: 50px auto 0;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    z-index: 10;
+    margin-right: 17px;
 }
 
 .collapse--content {
     background-color: #F6F6F6;
     border-radius: 0 0 5px 5px;
     overflow: hidden;
-    padding: 20px 15px;
     margin-top: -3px;
-
+    margin-bottom: 15px;
     transition:
-        max-height 0.3s ease-out,
-        opacity 0.3s ease-out .2s,
-        transform 0.3s ease-in-out,
-        margin 0.3s ease-out;
-}
-
-.content--open {
-    max-height: 500px;
-    opacity: 1;
-    transform: translateY(0);
-    margin-bottom: 25px;
+        max-height 0.6s ease-out,
+        opacity 0.4s ease-out .2s,
+        transform 0.6s ease-in-out,
+        margin 0.6s ease-out;
 }
 
 .content--close {
     transition: all .3s ease;
     max-height: 0;
     opacity: 0;
+    width: 100%;
+}
+
+.content--open {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+    width: 100%;
+}
+
+.about-contain {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 50px;
+    
+}
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+/* @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .about-contain {
+        width: 90%;
+    }
+} */
+
+@media screen and (max-width: 768px) {
+ .about-contain {
+    margin-top: 30px;
+    width: 90%;
+    gap: 10px;
+ }
 
 }
+     

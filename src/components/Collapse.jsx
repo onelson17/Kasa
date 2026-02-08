@@ -11,16 +11,16 @@ function Collapse({ title, content }) {
 
     return (
         <>
-            <section >
+            <div className='collapse--contain'>
                 <article  className='collapse'>
                     <h2>{title}</h2>
                     <img onClick={iconCollapse} src={Arrow} alt="Ouvrir" className={` arrow ${isOpen ? 'opened' : 'closed'} `}/>
                 </article>
 
-                <div className={` collapse--content ${isOpen ? 'content--close' : 'content--open'} `}>
+                <div className={` collapse--content ${isOpen ? 'content--open' : 'content--close'} `}>
                 {content}
                 </div>
-            </section>
+            </div>
         
         </>
     )

@@ -1,16 +1,18 @@
 .card {
-    position: relative; /* Pour placer le titre par-dessus l'image */
+    position: relative; 
     background-color: #FF6060;
     border-radius: 10px;
-    height: 340px; /* Hauteur fixe sur desktop */
+    height: 340px; 
     width: 100%;
     overflow: hidden;
-    display: block; /* Important car c'est un lien <a> */
+    display: block;
 }
-
+h3, p {
+    margin: 0;
+}
 .card-image {
     width: 100%;
-    height: 100%; /* Prend toute la hauteur de la card */
+    height: 100%;
     object-fit: cover;
     filter: brightness(0.8); 
 }
@@ -29,7 +31,7 @@
     color: white;
     font-size: 18px;
     font-weight: 500;
-    line-height: 142.6%;
+    
     white-space: nowrap;
     text-overflow: ellipsis;
     max-width: 400px;
@@ -37,15 +39,22 @@
 }
 .card p {
     color: black;
+    margin-top: 5px;
 }
 
-/* --- RESPONSIVE MOBILE --- */
-@media (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
     .card {
-        height: 255px; /* Hauteur réduite sur mobile */
+        width: 100%;
+        margin: 0 auto;
     }
-    
-    .card--title {
-        font-size: 14px;
     }
-}
+
+@media screen and (max-width: 768px) {
+   .card {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 400px;
+    min-height: 255px;
+   }
+   }

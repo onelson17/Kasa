@@ -4,10 +4,12 @@ import Footer from './Footer.jsx'
 
 function Layout({children}) {
     return (
-        <div className='layout'>
-            <Header />
-            <main>{children}</main>
-            <Footer />
+        <div className='layout-contain'>
+            <div className='layout'>
+                <Header />
+                <main>{children}</main>
+                <Footer />
+            </div>
         </div>
     )
 }

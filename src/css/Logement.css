@@ -2,14 +2,16 @@ h1 {
     font-size: 36px;
     font-weight: 500;
     color: #FF6060;
-    margin: 10px 0;
+}
+.logement-container {
+    padding: 0 17px;
 }
 .location-logement {
     font-size: 18px;
     font-weight: 500;
     margin: 10px 0;
 }
-section {
+.collapse--contain {
     flex: 1;
 }
 .logement--collapse {
@@ -17,9 +19,7 @@ section {
     justify-content: space-between;
     gap: 50px;
 }
-.collapse--content ul {
-    list-style: none;
-}
+
 
 .tag-contain {
     display: flex;
@@ -33,13 +33,19 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 5px 10px;
     color: white;
 }
 .logement-details {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 10px;
+}
+.logement-description,
+.equipement-list {
+    padding: 20px 10px;
+    margin: 0;
 }
 .star-full {
     color: #FF6060;
@@ -67,3 +73,51 @@ gap: 10px;
     max-width: 64px;
     max-height: 64px;
 }
+
+/* POUR TÉLÉPHONE */
+@media screen and (max-width: 767px) {
+   h1 {
+    font-size: 18px;
+    font-weight: 500;
+   }
+   .location-logement {
+    font-size: 16px;
+    font-weight: 500;
+   }
+   .logement-details {
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+   }
+   .logement--collapse {
+    flex-direction: column;
+    gap: 25px;
+   }
+   .logement--collapse h2 {
+    font-size: 16px;
+   }
+   .tag {
+    font-size: 10px;
+    font-weight: 700;
+    height: 18px;
+   }
+   .tag-contain {
+    margin: 10px 0;
+    gap: 15px;
+   }
+   .host-flex {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+   }
+   .logement-description,
+   .equipement-list {
+    font-size: 14px;
+   }
+   .host-name span {
+    font-size: 13px;
+   }
+
+   }
