@@ -75,6 +75,20 @@ gap: 10px;
     max-height: 64px;
 }
 
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+
+    .logement-details h1 {
+        font-size: 24px;
+        padding-right: 30px;
+        margin: 0;
+    }
+    
+    .logement-details {
+        margin-top: 17px;
+    }
+} 
+
+
 /* POUR TÉLÉPHONE */
 @media screen and (max-width: 767px) {
    h1 {
