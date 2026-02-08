@@ -78,6 +78,9 @@ h2 {
     width: 90%;
     gap: 10px;
  }
+ .collapse h2 {
+    font-size: 14px;
+ }
 
 }
      

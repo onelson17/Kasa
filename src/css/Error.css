@@ -19,3 +19,17 @@
     color: black;
     border-bottom: 1px solid black;
 }
+
+@media screen and (max-width: 768px) {
+
+    .error--number {
+        font-size: 96px;
+    }
+    .error--text {
+        font-size: 18px;
+        padding: 0 17px;
+    }
+    .error--redirection {
+        font-size: 14px;
+    }
+   }

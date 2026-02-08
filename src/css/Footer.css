@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 30px;
+
 }
 .footer {
     display: flex;
@@ -13,14 +14,18 @@
 }
 .footer p {
     color: white;
+
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-        .footer {
-            margin-top: 0px;
-        }
-    }
+      
+}
+   
 @media screen and (max-width: 768px) {
-    .footer {
-        margin-top: 0px;
+
+    .logo-footer {
+        width: 122px;
+    }
+    .footer p {
+        width: 133px;
     }
        }

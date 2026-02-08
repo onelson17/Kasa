@@ -24,18 +24,10 @@ width: 100%;
 }
 
 
-/* POUR TABLETTE 
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .banner {
-        border-radius: 10px;
-        width: 100%;
-        margin: 0 auto;
-    }
-    .banner-img {
-        border-radius: 10px;
-    }
-    
-}    */
+  
+}    
 
 /* POUR TÉLÉPHONE  */
 @media screen and (max-width: 767px) {

@@ -25,6 +25,7 @@ h1 {
     display: flex;
     gap: 24px;
     margin: 15px 0;
+    flex-wrap: wrap;
 }
 .tag {
     border-radius: 10px;
