@@ -3,7 +3,7 @@ import Slider from '../components/Slider.jsx'
 import { useParams, Navigate } from 'react-router-dom'
 import Data from '../data/logements.json'
 import Collapse from '../components/Collapse.jsx'
-import Style from '../components/Style.jsx'
+
 
 
 function Logement() {

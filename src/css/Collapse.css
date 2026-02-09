@@ -54,6 +54,7 @@ h2 {
 
 .about-contain {
     width: 80%;
+    max-width: 1240px;
     display: flex;
     flex-direction: column;
     gap: 20px;
