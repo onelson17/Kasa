@@ -17,8 +17,10 @@ function Collapse({ title, content }) {
                     <img onClick={iconCollapse} src={Arrow} alt="Ouvrir" className={` arrow ${isOpen ? 'opened' : 'closed'} `}/>
                 </article>
 
-                <div className={` collapse--content ${isOpen ? 'content--open' : 'content--close'} `}>
-                {content}
+                <div className={`collapse--content ${isOpen ? 'content--open' : 'content--close'}`}>
+                    <div className="collapse--inner">
+                        {content}
+                    </div>
                 </div>
             </div>
         

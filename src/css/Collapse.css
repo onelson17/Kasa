@@ -7,6 +7,8 @@
     border-radius: 5px;
     color: white;
     box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
 }
 h2 {
     padding-left: 17px;
@@ -18,30 +20,31 @@ h2 {
     margin: 0;
 }
 .arrow {
-    cursor: pointer;
-    transition: transform 0.4s ease;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     margin-right: 17px;
     flex-shrink: 0;
 }
 .arrow.opened {
     transform: rotate(180deg);
 }
+
+/* Trick grid-template-rows 0fr→1fr : anime sur la hauteur réelle du contenu */
 .collapse--content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     background-color: #F6F6F6;
     border-radius: 0 0 5px 5px;
-    overflow: hidden;
     margin-bottom: 15px;
-    transition:
-        max-height 0.4s ease,
-        opacity 0.3s ease;
 }
-.content--close {
-    max-height: 0;
-    opacity: 0;
+.collapse--inner {
+    overflow: hidden;
 }
 .content--open {
-    max-height: 600px;
-    opacity: 1;
+    grid-template-rows: 1fr;
+}
+.content--close {
+    grid-template-rows: 0fr;
 }
 
 .about-contain {
