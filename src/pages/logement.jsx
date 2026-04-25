@@ -1,17 +1,16 @@
 import '../css/Logement.css'
 import Slider from '../components/Slider.jsx'
-import { useParams, Navigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import Data from '../data/logements.json'
 import Collapse from '../components/Collapse.jsx'
-
-
+import Error from '../components/Error.jsx'
 
 function Logement() {
 
     const { id } = useParams()
     const logement = Data.find((item) => item.id === id)
     if (!logement) {
-        return <Navigate to="/404" replace={true}/> 
+        return <Error />
     }
 
     
